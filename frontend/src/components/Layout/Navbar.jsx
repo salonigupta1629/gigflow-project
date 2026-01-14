@@ -26,7 +26,7 @@ const Navbar = () => {
         } finally {
             localStorage.removeItem('user');
             setUser(null);
-            navigate('/login');
+         window.location.href = '/login'; 
         }
     };
 
