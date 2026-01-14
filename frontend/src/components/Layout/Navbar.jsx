@@ -17,7 +17,7 @@ const Navbar = () => {
     const handleLogout = async () => {
         try {
             await axios.post(
-                'http://localhost:5001/api/auth/logout',
+                'https://gigflow-api-ijxi.onrender.com/api/auth/logout',
                 {},
                 { withCredentials: true }
             );

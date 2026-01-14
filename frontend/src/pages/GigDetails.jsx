@@ -25,7 +25,7 @@ const GigDetails = () => {
     const fetchGigDetails = async () => {
         try {
             setLoading(true);
-            const response = await axios.get(`http://localhost:5001/api/gigs`);
+            const response = await axios.get(`https://gigflow-api-ijxi.onrender.com/api/gigs`);
             const gigs = response.data;
             const foundGig = gigs.find(g => g._id === id);
             
@@ -39,7 +39,7 @@ const GigDetails = () => {
             if (user) {
                 try {
                     const bidsResponse = await axios.get(
-                        `http://localhost:5001/api/bids/${id}`,
+                        `https://gigflow-api-ijxi.onrender.com/api/bids/${id}`,
                         { withCredentials: true }
                     );
                     const userBid = bidsResponse.data.find(bid => 

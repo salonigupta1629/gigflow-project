@@ -11,7 +11,7 @@ const BidList = ({ gigId, isOwner }) => {
         try {
             setLoading(true);
             const response = await axios.get(
-                `http://localhost:5001/api/bids/${gigId}`,
+                `https://gigflow-api-ijxi.onrender.com/api/bids/${gigId}`,
                 { withCredentials: true }
             );
             setBids(response.data);
@@ -37,7 +37,7 @@ const BidList = ({ gigId, isOwner }) => {
 
         try {
             await axios.patch(
-                `http://localhost:5001/api/bids/${bidId}/hire`,
+                `https://gigflow-api-ijxi.onrender.com/api/bids/${bidId}/hire`,
                 {},
                 { withCredentials: true }
             );

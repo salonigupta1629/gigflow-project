@@ -20,7 +20,7 @@ const MyGigs = () => {
     const fetchMyGigs = async (userId) => {
         try {
             setLoading(true);
-            const response = await axios.get('http://localhost:5001/api/gigs', {
+            const response = await axios.get('https://gigflow-api-ijxi.onrender.com/api/gigs', {
                 withCredentials: true
             });
             
@@ -41,7 +41,7 @@ const MyGigs = () => {
         }
 
         try {
-            await axios.delete(`http://localhost:5001/api/gigs/${gigId}`, {
+            await axios.delete(`https://gigflow-api-ijxi.onrender.com/api/gigs/${gigId}`, {
                 withCredentials: true
             });
             

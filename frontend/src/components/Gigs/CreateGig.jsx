@@ -33,7 +33,7 @@ const CreateGig = () => {
             }
 
             const response = await axios.post(
-                'http://localhost:5001/api/gigs',
+                'https://gigflow-api-ijxi.onrender.com/api/gigs',
                 {
                     ...formData,
                     budget: Number(formData.budget)

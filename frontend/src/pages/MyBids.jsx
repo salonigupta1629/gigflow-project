@@ -20,7 +20,7 @@ const MyBids = () => {
     const fetchMyBids = async (userId) => {
         try {
             setLoading(true);
-            const gigsResponse = await axios.get('http://localhost:5001/api/gigs', {
+            const gigsResponse = await axios.get('https://gigflow-api-ijxi.onrender.com/api/gigs', {
                 withCredentials: true
             });
             
@@ -29,7 +29,7 @@ const MyBids = () => {
             for (const gig of gigsResponse.data) {
                 try {
                     const bidsResponse = await axios.get(
-                        `http://localhost:5001/api/bids/${gig._id}`,
+                        `https://gigflow-api-ijxi.onrender.com/api/bids/${gig._id}`,
                         { withCredentials: true }
                     );
                     

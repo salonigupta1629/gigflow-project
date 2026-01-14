@@ -23,7 +23,7 @@ const Dashboard = () => {
     const fetchDashboardData = async (userId) => {
         try {
          
-            const gigsResponse = await axios.get('http://localhost:5001/api/gigs', {
+            const gigsResponse = await axios.get('https://gigflow-api-ijxi.onrender.com/api/gigs', {
                 withCredentials: true
             });
             

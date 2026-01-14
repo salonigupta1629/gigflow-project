@@ -7,7 +7,7 @@ export const fetchGigs = createAsyncThunk(
   async (search = '', { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        `http://localhost:5001/api/gigs?search=${search}`
+        `https://gigflow-api-ijxi.onrender.com/api/gigs?search=${search}`
       );
       return response.data;
     } catch (error) {
@@ -23,7 +23,7 @@ export const createGig = createAsyncThunk(
   async (gigData, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        'http://localhost:5001/api/gigs',
+        'https://gigflow-api-ijxi.onrender.com/api/gigs',
         gigData,
         { withCredentials: true }
       );
@@ -40,7 +40,7 @@ export const fetchGigById = createAsyncThunk(
   'gigs/fetchGigById',
   async (gigId, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`http://localhost:5001/api/gigs`);
+      const response = await axios.get(`https://gigflow-api-ijxi.onrender.com/api/gigs`);
       const gigs = response.data;
       const gig = gigs.find(g => g._id === gigId);
       if (!gig) {

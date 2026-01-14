@@ -6,7 +6,7 @@ export const register = createAsyncThunk(
   async (userData, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        'http://localhost:5001/api/auth/register',
+        'https://gigflow-api-ijxi.onrender.com/api/auth/register',
         userData,
         { withCredentials: true }
       );
@@ -24,7 +24,7 @@ export const login = createAsyncThunk(
   async (credentials, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        'http://localhost:5001/api/auth/login',
+        'https://gigflow-api-ijxi.onrender.com/api/auth/login',
         credentials,
         { withCredentials: true }
       );
@@ -42,7 +42,7 @@ export const logout = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       await axios.post(
-        'http://localhost:5001/api/auth/logout',
+        'https://gigflow-api-ijxi.onrender.com/api/auth/logout',
         {},
         { withCredentials: true }
       );

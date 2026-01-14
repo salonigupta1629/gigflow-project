@@ -11,7 +11,7 @@ const GigList = () => {
     const fetchGigs = async () => {
         try {
             setLoading(true);
-            const response = await axios.get(`http://localhost:5001/api/gigs?search=${search}`);
+            const response = await axios.get(`https://gigflow-api-ijxi.onrender.com/api/gigs?search=${search}`);
             setGigs(response.data);
             setError('');
         } catch (err) {

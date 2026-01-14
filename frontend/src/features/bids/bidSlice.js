@@ -6,7 +6,7 @@ export const submitBid = createAsyncThunk(
   async (bidData, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        'http://localhost:5001/api/bids',
+        'https://gigflow-api-ijxi.onrender.com/api/bids',
         bidData,
         { withCredentials: true }
       );
@@ -24,7 +24,7 @@ export const fetchBidsForGig = createAsyncThunk(
   async (gigId, { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        `http://localhost:5001/api/bids/${gigId}`,
+        `https://gigflow-api-ijxi.onrender.com/api/bids/${gigId}`,
         { withCredentials: true }
       );
       return { gigId, bids: response.data };
@@ -41,7 +41,7 @@ export const hireFreelancer = createAsyncThunk(
   async (bidId, { rejectWithValue }) => {
     try {
       const response = await axios.patch(
-        `http://localhost:5001/api/bids/${bidId}/hire`,
+        `https://gigflow-api-ijxi.onrender.com/api/bids/${bidId}/hire`,
         {},
         { withCredentials: true }
       );

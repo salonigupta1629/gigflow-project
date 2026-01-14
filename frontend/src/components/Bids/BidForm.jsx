@@ -29,7 +29,7 @@ const BidForm = ({ gigId, onBidSubmit }) => {
             }
 
             const response = await axios.post(
-                'http://localhost:5001/api/bids',
+                'https://gigflow-api-ijxi.onrender.com/api/bids',
                 {
                     gigId,
                     message: formData.message,
