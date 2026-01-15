@@ -25,7 +25,6 @@ A full-stack freelance marketplace platform where clients post jobs and freelanc
 
 ###  Bonus Features
 - ** Bonus 1:** MongoDB Transactions for race condition prevention
-- ** Bonus 2:** Socket.io real-time notifications (in progress)
 
 ## Tech Stack
 
