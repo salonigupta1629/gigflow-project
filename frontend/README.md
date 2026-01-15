@@ -1,16 +1,16 @@
 # GigFlow - Freelance Marketplace Platform
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-green)](https://gigflow.vercel.app)
-[![Backend API](https://img.shields.io/badge/Backend-API-blue)](https://gigflow-api.onrender.com)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-black)](https://github.com/yourusername/gigflow)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-green)](https://gigflow-project-livid.vercel.app)
+[![Backend API](https://img.shields.io/badge/Backend-API-blue)](https://gigflow-api-ijxi.onrender.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black)](https://github.com/salonigupta1629/gigflow-project)
 
 ##  Assignment Submission for ServiceHive Internship
 
 A full-stack freelance marketplace platform where clients post jobs and freelancers bid on them, implementing secure authentication, complex database relationships, and transactional hiring logic.
 
 ## Live Deployment
-- **Frontend:** [https://gigflow.vercel.app](https://gigflow.vercel.app)
-- **Backend API:** [https://gigflow-api.onrender.com](https://gigflow-api.onrender.com)
+- **Frontend:** [https://gigflow-project-livid.vercel.app](https://gigflow-project-livid.vercel.app)
+- **Backend API:** [https://gigflow-api-ijxi.onrender.com](https://gigflow-api-ijxi.onrender.com)
 - **API Documentation:** [See API Endpoints](#-api-endpoints)
 
 ##  Features Implemented
@@ -20,7 +20,8 @@ A full-stack freelance marketplace platform where clients post jobs and freelanc
 - **Gig Management:** Full CRUD operations with search functionality
 - **Bidding System:** Freelancers can bid on open gigs
 - **Hiring Logic:** Atomic hiring with transaction safety
-- **Authorization:** Role-based access control
+- **All 7 API Endpoints:** As specified in assignment
+- **Production Deployment:** Vercel (Frontend) + Render (Backend)
 
 ###  Bonus Features
 - ** Bonus 1:** MongoDB Transactions for race condition prevention
@@ -198,6 +199,6 @@ Submitted to: ritik.yadav@servicehive.tech
 CC: hiring@servicehive.tech
 
 ##  Author
-Saloni Gupta 
+Saloni Gupta - https://github.com/salonigupta1629/gigflow-project.git
 
 

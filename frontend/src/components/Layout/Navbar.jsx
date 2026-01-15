@@ -26,7 +26,7 @@ const Navbar = () => {
         } finally {
             localStorage.removeItem('user');
             setUser(null);
-         window.location.href = '/login'; 
+            window.location.href = '/';
         }
     };
 
