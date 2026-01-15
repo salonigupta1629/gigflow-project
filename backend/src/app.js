@@ -14,23 +14,31 @@ connectDB();
 
 const app = express();
 
-const allowedOrigins = [
-    'https://gigflow-project-livid.vercel.app',
-    'http://localhost:5173'
-];
+const getAllowedOrigins = () => {
+    if (process.env.FRONTEND_URL) {
+        return process.env.FRONTEND_URL.split(',');
+    }
+    return ['http://localhost:5173'];
+};
+
+const allowedOrigins = getAllowedOrigins();
+console.log('Allowed origins:', allowedOrigins);
 
 app.use(cors({
     origin: function (origin, callback) {
         if (!origin) return callback(null, true);
 
-        if (allowedOrigins.indexOf(origin) !== -1) {
+        if (allowedOrigins.includes(origin)) {
             callback(null, true);
         } else {
+            console.log('CORS blocked origin:', origin);
+            console.log('Allowed origins:', allowedOrigins);
             callback(new Error('Not allowed by CORS'));
         }
     },
     credentials: true,
-    exposedHeaders: ['Set-Cookie']
+    exposedHeaders: ['Set-Cookie'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 app.use(cookieParser());
